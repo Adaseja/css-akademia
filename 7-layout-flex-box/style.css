@@ -18,16 +18,17 @@
   background: purple;
 }
 
-.main {
+article {
   text-align: left;
   background: deepskyblue;
+  color: white;
 }
 
-.aside-1 {
+nav {
   background: green;
 }
 
-.aside-2 {
+aside {
   background: pink;
 }
 
@@ -57,4 +58,35 @@
 
 body {
   padding: 2em;
+}
+
+main {
+  display: flex;
+}
+main > article {
+  order: 2;
+  min-width: 12em;
+  flex: 1;
+}
+main > nav {
+  order: 1;
+  width: 200px;
+}
+main > aside {
+  order: 3;
+  width: 200px;
+}
+
+@media all and (max-width: 600px) {
+  /* Too narrow to support three columns */
+  main {
+    flex-flow: column;
+  }
+  main > article,
+  main > nav,
+  main > aside {
+    /* Return them to document order */
+    order: 0;
+    width: auto;
+  }
 }
