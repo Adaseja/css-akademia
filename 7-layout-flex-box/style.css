@@ -1,0 +1,52 @@
+header {
+  background-color: red;
+  height: 50px;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.left {
+  background-color: green;
+  height: 200px;
+  width: 20%;
+  margin-right: 20px;
+}
+
+.body-content {
+  background-color: blue;
+  width: 60%;
+  padding: 20px;
+}
+
+.right {
+  background-color: pink;
+  height: 200px;
+  width: 20%;
+  margin-left: 20px;
+}
+
+footer {
+  background-color: purple;
+  height: 50px;
+}
+
+@media screen and (max-width: 992px) {
+  main {
+    flex-direction: column;
+  }
+
+  .left,
+  .right {
+    width: 100%;
+  
+}
+
+@media screen and (max-width: 768px) {
+  .body-content {
+    width: 100%;
+  }
+}
