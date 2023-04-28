@@ -127,3 +127,9 @@ section {
   color: #777;
   line-height: 1.4;
 }
+
+/* Portfolio section styles */
+
+.portfolio {
+  background-color: #f2f1ed;
+}
