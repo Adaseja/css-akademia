@@ -12,6 +12,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
   </head>
   <body>
     <header class="main-header">
@@ -27,6 +28,8 @@
 
     <!-- Menu nawigacyjne z niebieskim paskiem -->
     <nav class="main-menu">
+      <label for="drop-nav">Menu</label>
+      <input type="checkbox" class="drop-nav">
       <ul>
         <li class="menu-item"><a href="#about">O mnie</a></li>
         <li class="menu-item"><a href="#portfolio"> Portfolio</a></li>
@@ -124,15 +127,35 @@
     </section>
 
     <!--     Sekcja kontakt -->
-    <section id="contact" class="contact">
+    <section class="contact">
       <div class="container">
+        <header class="section-header">
         <h2>Kontakt</h2>
         <hr />
+      </header>
+
+      <form action="submit.php" method="post">
+        <input type="text" placeholder="Imie" name="name" required>
+      <input type="email" placeholder="E-mail" name="email" required>
+      <textarea placeholder="Wiadomosc" name="message" required></textarea>
+      <input type="submit" class="btn" value="Wyślij">
+    </form>
+    <div class="social-links">
+      <a href="" class="social-link"><i class="fab fa-facebook"></i></a>
+      <a href="" class="social-link"><i class="fab fa-twitter"></i></a>
+      <a href="" class="social-link"><i class="fab fa-instagram"></i></a>
+      <a href="" class="social-link"><i class="fab fa-youtube"></i></a>
+    </div>
+    
       </div>
     </section>
 
-    <footer id="text-header">
-      <h4 id="text">Cypyright by Akademia 108 - Szkola Programowania</h4>
+    <footer class="main-footer">
+<div class="container">
+  <p> Copyright © Akademia 108 - Szkola Programowania</p>
+</div>
     </footer>
   </body>
 </html>
+
+
