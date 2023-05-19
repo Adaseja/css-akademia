@@ -1,41 +1,87 @@
 .wrapper {
   display: flex;
-  flex-flow: row wrap;
+  flex-wrap: wrap;
   font-weight: bold;
   text-align: center;
+ 
 }
 
-.wrapper > * {
+/* .wrapper>* {
   flex: 1 100%;
-}
+} */
 
 .header,
 .footer {
-  flex: 1 100%;
+  flex-basis: 100%;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
 }
 
 .header {
-  background: red;
+  background: orangered;
   height: 40px;
+  font-weight: normal;
+  color: white;
+ 
+  
 }
 
 .footer {
-  background: purple;
+  background: rgba(112, 2, 190, 0.636);
   height: 40px;
+  font-weight: normal;
+  color: white;
+  order: 4 ;
 }
 
 article {
-  text-align: left;
+  
   background: deepskyblue;
   color: white;
+  margin: 0;
+  flex-basis: 60%;
+  order: 1;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  
+}
+
+p {
+  margin: 0;
+
+  
+  
 }
 
 nav {
   background: green;
+  text-transform: uppercase;
+  flex-basis: 20%;
+  order: 0;
+  height: 100px;
+  font-weight: normal;
+  color: white;
+ 
+  
+  
 }
 
 aside {
-  background: pink;
+  background: rgba(254, 183, 194, 0.833);
+  text-transform: uppercase;
+  flex-basis: 20%;
+  order: 2;
+  height: 100px;
+  font-weight: normal;
+  color: white;
+ 
+  
 }
 
 @media all and (max-width: 992px) {
@@ -50,56 +96,28 @@ aside {
     height: 100px;
   }
 
-  main > article {
+  article {
     flex-basis: 75%;
   }
 }
 
-@media all and (min-width: 600px) {
-  .aside {
-    flex: 1 0 0;
-  }
-}
 
-@media all and (min-width: 800px) {
-  .main {
-    flex: 3 0px;
-  }
-  .aside-1 {
-    order: 1;
-  }
-  .main {
-    order: 2;
-  }
-  .aside-2 {
-    order: 3;
-  }
+
+
+@media all and (max-width: 768px) {
+
+  .header,
   .footer {
-    order: 4;
+    flex-basis: 100%;
   }
-}
 
-body {
-  padding: 2em;
-}
+  .aside-1,
+  .aside-2 {
+    flex-basis: 100%;
+  }
 
-main {
-  display: flex;
-  flex-wrap: wrap;
-}
-main > article {
-  order: 2;
-  flex-basis: 50%;
-  background: deepskyblue;
-  color: white;
-}
-main > nav {
-  order: 1;
-  flex-basis: 25%;
-  background: green;
-}
-main > aside {
-  order: 3;
-  flex-basis: 25%;
-  background-color: pink;
+  article,
+  nav {
+    flex-basis: 100%;
+  }
 }
