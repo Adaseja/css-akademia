@@ -243,7 +243,7 @@ display: none;
   color: #777;
  }
 
- /* <!-- Responsive styles --> */
+ 
 
 @media (max-width: 1200px) {
 .container{
@@ -251,14 +251,27 @@ display: none;
 }
 }
 
-@media (max-width: 992px) {
-  .container{
-    max-width: 768px;
+@media (min-width: 992px) {
+  .main-menu {
+    display: flex;
+    justify-content: flex-end;
   }
-  .portfolio-wrapper .portfolio-item {
-    flex-basis: 50%;
+
+  .main-menu ul {
+    display: flex;
+    margin-right: 20px;
+  }
+
+  .main-menu ul .menu-item {
+    margin: 0 10px;
+  }
+
+  label[for="drop-nav"] {
+    display: none;
   }
 }
+
+
 
 @media (max-width: 768px) {
   .container{
@@ -271,42 +284,41 @@ display: none;
 }
 
 @media (max-width: 480px) {
-  .main-header .main-header-content j1 {
-    font-size: 1;
-    
+  .main-header .main-header-content h1 {
+  font-size: 1em;
   }
-
+  
   .about .about-img {
-    max-height: 200px;
-    max-width: 200px;
+  max-height: 200px;
+  max-width: 200px;
   }
-
+  
   .contact input[type="text"],
   .contact input[type="email"] {
-    flex-basis: 100%;
+  flex-basis: 100%;
   }
-
-}
-label[for="drop-nav"] {
+  
+  label[for="drop-nav"] {
   display: block;
   padding: 14px 20px;
   color: #fff;
   text-transform: uppercase;
-  font-size:1.5em;
+  font-size: 1.5em;
   text-align: right;
   cursor: pointer;
-}
-
-.main-menu ul {
+  }
+  
+  .main-menu ul {
   display: none;
-}
-
-.drop-nav:checked +  ul {
+  }
+  
+  .drop-nav:checked + ul {
   display: block;
-}
-
-.main-menu ul .manu-item {
+  }
+  
+  .main-menu ul .main-item {
   display: block;
   text-align: right;
   margin: 0;
-}
+  }
+  }
